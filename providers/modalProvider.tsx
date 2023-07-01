@@ -1,7 +1,8 @@
 'use client'
 
-import StoreModal from '@/components/modals/storeModal'
 import { FC, useEffect, useState } from 'react'
+
+import StoreModal from '@/components/modals/StoreModal'
 
 interface modalProviderProps {}
 
