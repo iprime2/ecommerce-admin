@@ -8,7 +8,7 @@ import axios from 'axios'
 
 import { toast } from 'react-hot-toast'
 
-import { CategoryColumn } from './columns'
+import { ProductColumn } from './columns'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,7 +21,7 @@ import { useParams, useRouter } from 'next/navigation'
 import AlertModal from '@/components/modals/AlertModal'
 
 interface CellActionProps {
-  data: CategoryColumn
+  data: ProductColumn
 }
 
 const CellAction: FC<CellActionProps> = ({ data }) => {
@@ -33,19 +33,17 @@ const CellAction: FC<CellActionProps> = ({ data }) => {
 
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id)
-    toast.success('Category ID Copied to clipboard')
+    toast.success('Product ID Copied to clipboard')
   }
 
   const onDelete = async () => {
     try {
       setLoading(true)
-      await axios.delete(`/api/${params.storeId}/categories/${data.id}`)
+      await axios.delete(`/api/${params.storeId}/products/${data.id}`)
       router.refresh()
-      toast.success('Billboard deleted.')
+      toast.success('Product deleted.')
     } catch (error: any) {
-      toast.error(
-        'Make sure you removed all categories using this billboard first.'
-      )
+      toast.error('Something Went wrong')
     } finally {
       setLoading(false)
       setOpen(false)
@@ -75,7 +73,7 @@ const CellAction: FC<CellActionProps> = ({ data }) => {
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() =>
-              router.push(`/${params.storeId}/categories/${data.id}`)
+              router.push(`/${params.storeId}/products/${data.id}`)
             }
           >
             <Edit className='mr-2 h-4 w-4' />
