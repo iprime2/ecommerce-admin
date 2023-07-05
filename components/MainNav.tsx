@@ -44,7 +44,7 @@ const MainNav = ({
       active:
         pathname === `/${params.storeId}/sizes` ||
         pathname === `/${params.storeId}/sizes/${params.sizeId}` ||
-        pathname === `/${params.storeId}/size/new`,
+        pathname === `/${params.storeId}/sizes/new`,
     },
     {
       key: 'Colors',
@@ -62,7 +62,16 @@ const MainNav = ({
       active:
         pathname === `/${params.storeId}/products/${params.productId}` ||
         pathname === `/${params.storeId}/products` ||
-        pathname === `/${params.storeId}/product/new`,
+        pathname === `/${params.storeId}/products/new`,
+    },
+    {
+      key: 'orders',
+      href: `/${params.storeId}/orders`,
+      label: 'Order',
+      active:
+        pathname === `/${params.storeId}/orders/${params.orderId}` ||
+        pathname === `/${params.storeId}/orders` ||
+        pathname === `/${params.storeId}/orders/new`,
     },
     {
       key: 'Settings',
