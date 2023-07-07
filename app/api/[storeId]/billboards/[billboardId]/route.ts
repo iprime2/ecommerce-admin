@@ -11,9 +11,9 @@ export async function GET(
 
     const { billboardId } = params
 
-    if (!userId) {
-      return new NextResponse('Unauthenticated', { status: 400 })
-    }
+    // if (!userId) {
+    //   return new NextResponse('Unauthenticated', { status: 400 })
+    // }
 
     if (!billboardId) {
       return new NextResponse('Billboard Id is required', { status: 400 })

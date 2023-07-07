@@ -11,9 +11,9 @@ export async function GET(
 
     const { productId } = params
 
-    if (!userId) {
-      return new NextResponse('Unauthenticated', { status: 400 })
-    }
+    // if (!userId) {
+    //   return new NextResponse('Unauthenticated', { status: 400 })
+    // }
 
     if (!productId) {
       return new NextResponse('Product Id is required', { status: 400 })

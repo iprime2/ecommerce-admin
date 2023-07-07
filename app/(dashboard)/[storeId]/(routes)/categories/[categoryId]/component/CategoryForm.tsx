@@ -26,9 +26,9 @@ import AlertModal from '@/components/modals/AlertModal'
 import {
   Select,
   SelectContent,
+  SelectItem,
   SelectTrigger,
   SelectValue,
-  SelectItem,
 } from '@/components/ui/select'
 
 const formSchema = z.object({
