@@ -2,8 +2,6 @@
 
 #### https://sushil-ecommerce-admin.vercel.app
 
-![Screenshot](demo.png)
-
 ### Features:
 
 -We will be using Shadcn UI for the Admin!
@@ -23,6 +21,11 @@
 - Stripe checkout
 - Stripe webhooks
 - MySQL + Prisma + PlanetScale
+
+![Screenshot](demo.png)
+![Screenshot](demo1.png)
+
+
 
 ### Prerequisites
 
