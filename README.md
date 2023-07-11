@@ -1,6 +1,6 @@
 # Full Stack E-Commerce Admin with Next.js 13, Clerk, Stripe, App Router, React, Shadcn UI, Tailwind, Prisma, MySQL, Planet Scale, NextAuth 2023
 
-#### https://sushil-airbnb-clone.vercel.app
+#### https://sushil-ecommerce-admin.vercel.app
 
 ![Screenshot](demo.png)
 
